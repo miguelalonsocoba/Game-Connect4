@@ -7,31 +7,38 @@ class Piece
 class Row
 class Column
 class Turn
+class Aggregation
+enum Color {
+  Red
+  Yellow
+}
 enum Target {
   Horizontal
   Vertical
   Diagonal
 }
-enum Color {
-  Red
-  Yellow
-}
+note right: Align four consecutive\npieces of the same color.
 
-Connect4 *--> "2" Player
-Connect4 *--> Board
-Connect4 *--> "42" Piece
-Connect4 *--> Target
-Connect4 *--> Turn
+Connect4 *-- "2" Player
+Connect4 *-- Board
+Connect4 *-- "2x21" Piece
+Connect4 *-- Turn
 
-Board *--> "6" Row
-Board *--> "7" Column
-Board o--> Piece
+Board *-- "6" Row
+Board *-- "7" Column
+Board o-- Piece
 
-Player --> Target : complete
+Player *-- Target
 Player ..> "21" Piece
-Player --> Board : adds
-Player --> Turn
+Player ..> Aggregation
 
 Piece --> Color
+
+Turn -->  Player : active
+
+Aggregation --> Board
+Aggregation ..> Piece
+
+Target *--> "4" Piece : achieve
 
 @enduml
