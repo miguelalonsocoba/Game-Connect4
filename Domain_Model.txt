@@ -1,0 +1,36 @@
+@startuml
+class Connect4
+class Player
+class Board
+class Piece
+class Row
+class Column
+class Turn
+enum Target {
+  Horizontal
+  Vertical
+  Diagonal
+}
+enum Color {
+  Red
+  Yellow
+}
+
+Connect4 *--> "2" Player
+Connect4 *--> Board
+Connect4 *--> "42" Piece
+Connect4 *--> Target
+Connect4 *--> Turn
+
+Board *--> "6" Row
+Board *--> "7" Column
+Board o--> Piece
+
+Player --> Target : complete
+Player ..> "21" Piece
+Player --> Board : adds
+Player --> Turn
+
+Piece --> Color
+
+@enduml
