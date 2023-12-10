@@ -1,45 +1,28 @@
 @startuml
-title Domian Model
-class Connect4
-class Player
-class Board
-class Piece
-class Row
-class Column
-class Turn
-class Aggregation
-enum Color {
-  Red
-  Yellow
-}
-enum Target {
-  Horizontal
-  Vertical
-  Diagonal
-}
-note right: Align four consecutive\npieces of the same color.
 
-Connect4 *-- "2" Player
-Connect4 *-- Board
-Connect4 *-- "2x21" Piece
-Connect4 *-- Turn
-
-Board *-- "6" Row
-Board *-- "7" Column
-Board o-- Piece
-
-Player *-- Target
-Player ..> "21" Piece
-Player ..> Aggregation
-
-Piece --> Color
-
-Turn -->  Player : active
-
-Aggregation --> Column : select
-Aggregation --> Row : last row empty
-Aggregation ..> Piece
-
-Target *--> "4" Piece : achieve
+start
+ repeat
+  :add Yellow;
+  :add Red;
+ repeat while (are there 3 Yellowś on board) is (no) not (yes)
+ :add Yellow;
+ while (check is connect4 Yellow) is (no)
+ if (Board is completed) then (yes)
+  :tie;
+  stop
+ else (no)
+  :add Red;
+  if (check is connect4 Red) then (yes)
+   stop
+  else (no)
+   if (run out of discs?) then (yes)
+    stop
+   else (no)
+    :add Yellow;
+   endif
+  endif
+  endif
+ endwhile (yes)
+stop
 
 @enduml
