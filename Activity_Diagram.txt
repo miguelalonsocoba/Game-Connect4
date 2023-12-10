@@ -1,0 +1,23 @@
+@startuml
+
+start
+ repeat
+  :insert Yello;
+  :insert Red;
+ repeat while (are there 3 Yellowś on board) is (no) not (yes)
+ :insert Yello;
+ while (text) is (no)
+  :insert Red;
+  if (check is connect4 Red) then (yes)
+   stop
+  else (no)
+   if (run out of discs?) then (yes)
+    stop
+   else (no)
+    :insert Yellow;
+   endif
+  endif
+ endwhile (yes)
+stop
+
+@enduml
