@@ -1,5 +1,5 @@
 @startuml
-title Domian Model
+title Vocabulary
 class Connect4
 class Player
 class Board
