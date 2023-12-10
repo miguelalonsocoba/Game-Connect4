@@ -2,21 +2,26 @@
 
 start
  repeat
-  :insert Yello;
-  :insert Red;
+  :add Yellow;
+  :add Red;
  repeat while (are there 3 Yellowś on board) is (no) not (yes)
- :insert Yello;
- while (text) is (no)
-  :insert Red;
-  if (check is connect4 Red) then (yes)
-   stop
-  else (no)
-   if (run out of discs?) then (yes)
-    stop
+ :add Yellow;
+ while (check is connect4 Yellow) is (no)
+   if (Board is completed?) then (yes)
+     :tie;
+     stop
    else (no)
-    :insert Yellow;
+     :add Red;
+     if (check is connect4 Red) then (yes)
+       stop
+     else (no)
+       if (run out of discs?) then (yes)
+         stop
+       else (no)
+         :add Yellow;
+       endif
+     endif
    endif
-  endif
  endwhile (yes)
 stop
 
