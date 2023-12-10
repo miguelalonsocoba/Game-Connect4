@@ -36,7 +36,8 @@ Piece --> Color
 
 Turn -->  Player : active
 
-Aggregation --> Board
+Aggregation --> Column : select
+Aggregation --> Row : last row empty
 Aggregation ..> Piece
 
 Target *--> "4" Piece : achieve
