@@ -1,0 +1,41 @@
+@startuml
+
+class Connect4View {
+  + void play()
+}
+class YesNoDialogView {
+  - String answer
+  
+  + read()
+  + isAffirmative()
+  - isNegative()
+}
+class Board {
+  - void assignTurnAndToken()
+  + void add(Piece piece)
+}
+class Player {
+  - Piece piece
+  - Turn turn
+  + void add(Piece piece)
+}
+class Piece {
+  - String color
+  
+  - String getColor()
+}
+class Turn {
+  - number turn
+  + Number getTrun()
+}
+
+Connect4View --> YesNoDialogView
+Connect4View --> Board
+Connect4View *--> "2" Player
+
+Player --> Piece
+
+Board --> Turn
+Board o--> Piece
+
+@enduml
