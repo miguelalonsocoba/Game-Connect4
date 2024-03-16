@@ -4,6 +4,7 @@ class Connect4View {
   + void play()
 }
 class YesNoDialogView {
+  - String question
   - String answer
   
   + read()
@@ -13,6 +14,7 @@ class YesNoDialogView {
 class Board {
   - void assignTurnAndToken()
   + void add(Piece piece)
+  + boolean isWinner()
 }
 class Player {
   - Piece piece
@@ -30,12 +32,13 @@ class Turn {
 }
 
 Connect4View --> YesNoDialogView
-Connect4View --> Board
-Connect4View *--> "2" Player
+Connect4View *-- Board
+Connect4View *-- "2" Player
 
 Player --> Piece
 
 Board --> Turn
 Board o--> Piece
+Board --> "2" Player
 
 @enduml

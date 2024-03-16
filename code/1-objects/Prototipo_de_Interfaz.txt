@@ -1,0 +1,214 @@
+------------ CONNECT4 ------------
+
+*****************
+Turno: Jugador 1 - Red:
+
+-----------------------------
+| o | o | o | o | o | o | o |
+
+| o | o | o | o | o | o | o |
+
+| o | o | o | o | o | o | o |
+
+| o | o | o | o | o | o | o |
+
+| o | o | o | o | o | o | o |
+
+| o | o | o | o | o | o | o |
+-----------------------------
+ 
+
+ Selecciona la columna para insertar ficha: 8
+ Error, columna no existente, selecciona en el rango de (1 - 7):
+ elecciona la columna para insertar ficha: 0
+ Error, columna no existente, selecciona en el rango de (1 - 7):
+ Selecciona la columna para insertar ficha: 7
+
+*****************
+Turno: Jugador 2 - Yellow:
+
+-----------------------------
+| o | o | o | o | o | o | o |
+
+| o | o | o | o | o | o | o |
+
+| o | o | o | o | o | o | o |
+
+| o | o | o | o | o | o | o |
+
+| o | o | o | o | o | o | o |
+
+| o | o | o | o | o | o | R |
+-----------------------------
+
+Selecciona la columna para insertar ficha: 6
+
+*****************
+Turno: Jugador 1 - Red:
+
+-----------------------------
+| o | o | o | o | o | o | o |
+
+| o | o | o | o | o | o | o |
+
+| o | o | o | o | o | o | o |
+
+| o | o | o | o | o | o | o |
+
+| o | o | o | o | o | o | o |
+
+| o | o | o | o | o | Y | R |
+-----------------------------
+
+Selecciona la columna para insertar ficha: 7
+
+*****************
+Turno: Jugador 2 - Yellow:
+
+-----------------------------
+| o | o | o | o | o | o | o |
+
+| o | o | o | o | o | o | o |
+
+| o | o | o | o | o | o | o |
+
+| o | o | o | o | o | o | o |
+
+| o | o | o | o | o | o | R |
+
+| o | o | o | o | o | Y | R |
+-----------------------------
+
+Selecciona la columna para insertar ficha: 6
+
+*****************
+Turno: Jugador 1 - Red:
+
+-----------------------------
+| o | o | o | o | o | o | o |
+
+| o | o | o | o | o | o | o |
+
+| o | o | o | o | o | o | o |
+
+| o | o | o | o | o | o | o |
+
+| o | o | o | o | o | Y | R |
+
+| o | o | o | o | o | Y | R |
+-----------------------------
+
+Selecciona la columna para insertar ficha: 7
+
+*****************
+Turno: Jugador 2 - Yellow:
+
+-----------------------------
+| o | o | o | o | o | o | o |
+
+| o | o | o | o | o | o | o |
+
+| o | o | o | o | o | o | o |
+
+| o | o | o | o | o | o | R |
+
+| o | o | o | o | o | Y | R |
+
+| o | o | o | o | o | Y | R |
+-----------------------------
+
+Selecciona la columna para insertar ficha: 7
+
+*****************
+Turno: Jugador 1 - Red:
+
+-----------------------------
+| o | o | o | o | o | o | o |
+
+| o | o | o | o | o | o | o |
+
+| o | o | o | o | o | o | Y |
+
+| o | o | o | o | o | o | R |
+
+| o | o | o | o | o | Y | R |
+
+| o | o | o | o | o | Y | R |
+-----------------------------
+
+Selecciona la columna para insertar ficha: 5
+
+*****************
+Turno: Jugador 2 - Yellow:
+
+-----------------------------
+| o | o | o | o | o | o | o |
+
+| o | o | o | o | o | o | o |
+
+| o | o | o | o | o | o | Y |
+
+| o | o | o | o | o | o | R |
+
+| o | o | o | o | o | Y | R |
+
+| o | o | o | o | R | Y | R |
+-----------------------------
+
+Selecciona la columna para insertar ficha: 6
+
+*****************
+Turno: Jugador 1 - Red:
+
+-----------------------------
+| o | o | o | o | o | o | o |
+
+| o | o | o | o | o | o | o |
+
+| o | o | o | o | o | o | Y |
+
+| o | o | o | o | o | Y | R |
+
+| o | o | o | o | o | Y | R |
+
+| o | o | o | o | R | Y | R |
+-----------------------------
+
+Selecciona la columna para insertar ficha: 5
+
+*****************
+Turno: Jugador 2 - Yellow:
+
+-----------------------------
+| o | o | o | o | o | o | o |
+
+| o | o | o | o | o | o | o |
+
+| o | o | o | o | o | o | Y |
+
+| o | o | o | o | o | Y | R |
+
+| o | o | o | o | R | Y | R |
+
+| o | o | o | o | R | Y | R |
+-----------------------------
+
+Selecciona la columna para insertar ficha: 6
+
+**** FELICIDADES **** Jugador 2 a ganado
+
+-----------------------------
+| o | o | o | o | o | o | o |
+
+| o | o | o | o | o | o | o |
+
+| o | o | o | o | o | Y | Y |
+
+| o | o | o | o | o | Y | R |
+
+| o | o | o | o | R | Y | R |
+
+| o | o | o | o | R | Y | R |
+-----------------------------
+
+¿Quieres jugar otra partida? no
