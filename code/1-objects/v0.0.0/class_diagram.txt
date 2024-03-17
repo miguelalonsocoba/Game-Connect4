@@ -11,10 +11,22 @@ class YesNoDialogView {
   + isAffirmative()
   - isNegative()
 }
+class BoarView {
+  - Board Board
+  
+  + void show()
+  + Number readColumnToInsertPiece()
+  - void showTurn()
+  - void showSquares()
+}
 class Board {
+  - [][]squares
+
+  + void start()
+  - [] getSquares() 
   - void assignTurnAndToken()
-  + void add(Piece piece)
-  + boolean isWinner()
+  - void add(Piece piece)
+  - boolean isWinner()
 }
 class Player {
   - Piece piece
@@ -32,10 +44,13 @@ class Turn {
 }
 
 Connect4View --> YesNoDialogView
-Connect4View *-- Board
+Connect4View *-- BoarView
 Connect4View *-- "2" Player
 
+
 Player --> Piece
+
+BoarView --> Board
 
 Board --> Turn
 Board o--> Piece

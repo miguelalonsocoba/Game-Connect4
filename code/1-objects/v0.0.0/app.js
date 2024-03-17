@@ -7,9 +7,11 @@ function initConnect4View() {
   return {
     play: function () {
       const continueDialogView = initYesNoDialogView("Do you want to play another game?");
+      const boardView = initBoardView();
       do {
         console.writeln(`\n\n------------ CONNECT4 ------------\n\n`);
-        initBoardView().show();
+        boardView.show();
+        let columnNumber = boardView.readColumnToInsertPiece();
         continueDialogView.read();
       } while (continueDialogView.isAffirmative());
     },
@@ -43,11 +45,11 @@ function initYesNoDialogView(question) {
 function initBoardView() {
   const board = initBoard();
 
-  function printTurn() {
-    console.writeln(`Turno: Jugador ${board.getPlayer()} - ${board.getColor()}`);
+  function showTurn() {
+    console.writeln(`Turno: Jugador ${board.getPlayer()} - ${board.getPlayerColor()}`);
   }
 
-  function printBoard() {
+  function showSquares() {
     for (let i = 0; i < board.getSquares().length; i++) {
       for (let j = 0; j < board.getSquares()[0].length; j++) {
         console.write(` | ${board.getSquares()[i][j]}`);
@@ -59,8 +61,12 @@ function initBoardView() {
   return {
     show: function () {
       console.writeln(`*****************`);
-      // printTurn();
-      printBoard();
+      showTurn();
+      showSquares();
+    },
+    readColumnToInsertPiece: function () {
+      const columnNumber = console.readNumber(`Selecciona la columna para insertar ficha: `);
+      console.writeln(columnNumber);
     },
   };
 }
@@ -74,13 +80,13 @@ function initBoard() {
     ["_", "_", "_", "_", "_", "_", "_"],
     ["_", "_", "_", "_", "_", "_", "_"],
   ];
-  const player1 = initPlayer();
-  const player2 = initPlayer();
 
   return {
     getSquares: function () {
       return squares;
     },
+    getPlayer: function () {},
+    getPlayerColor: function () {},
   };
 }
 
